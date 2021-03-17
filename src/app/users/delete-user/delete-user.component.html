@@ -1,0 +1,21 @@
+<div class="col">
+    <h2>Deletar usuário</h2>
+</div>
+<div *ngIf="user">
+    <div class="col">
+        <label>Id: <strong>{{user.id}}</strong>
+        </label>
+    </div>
+    <div class="col">
+        <label>Nome: <strong>{{user.first_name}}</strong>
+        </label>
+    </div>
+    <div class="col">
+        <label>Profissão: <strong>{{user.last_name}}</strong>
+        </label>
+    </div>
+    <div class="col">
+        <button (click)="delete()" class="btn btn-danger mr-3">Confirmar</button>
+        <button (click)="cancel()" class="btn btn-primary">Cancelar</button>
+    </div>
+</div>

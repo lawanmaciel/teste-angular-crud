@@ -1,0 +1,28 @@
+<h1>Usuários</h1>
+<table *ngIf="responseUsers" class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Sobrenome</th>
+          </tr>
+    </thead>
+    <tbody *ngFor="let user of responseUsers.data">
+        <tr>
+            <th scope="row">{{user.id}}</th>
+            <td>{{user.first_name}}</td>
+            <td>{{user.last_name}}</td>
+            <td>
+                <button class="btn btn-primary mr-3">
+                    <a routerLink="/users/update/{{user.id}}" class="text-white">Editar</a>
+                </button>
+                <button class="btn btn-danger">
+                    <a routerLink="/users/delete/{{user.id}}" class="text-white">Deletar</a>
+                </button>
+            </td>
+            <td>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
